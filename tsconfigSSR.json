@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES6",
+    "sourceMap": false,
+    "outDir": "./dist/",
+    "module": "CommonJS",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": ["es2016", "es2017", "dom", "es6", "esnext", "dom.iterable"],
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "paths": {
+      "@svg": ["src/svg"],
+      "@svg/*": ["src/svg/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"],
+      "@consts": ["src/consts"],
+      "@consts/*": ["src/consts/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"]
+    },
+    "typeRoots": ["node_modules/@types"],
+    "skipLibCheck": true,
+    "preserveConstEnums": true
+  },
+  "compileOnSave": true,
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js"],
+  "exclude": ["node_modules", "src/express-server.js", "src/server-render.js"]
+}

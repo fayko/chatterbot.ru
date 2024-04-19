@@ -1,0 +1,52 @@
+{
+  "name": "chatter",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "webpack --watch",
+    "server": "node ./src/express-server.ts",
+    "build-dev": "webpack",
+    "build-prod": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "ssr": "cross-env NODE_ENV=production webpack --config webpack.config.js && node ./src/server-render.js",
+    "test": "tsc --project tsconfigSSR.json && tsc-alias -p tsconfigSSR.json && node ./src/server-render.js",
+    "ssr-build": "webpack --config webpack.SSRconfig.js"
+  },
+  "author": "Ermakov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.13.7",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.3",
+    "prettier-eslint": "^15.0.1",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0",
+    "tsc-alias": "^1.8.8"
+  },
+  "dependencies": {
+    "eslint": "^8.48.0",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.15.0",
+    "styled-components": "^6.1.0"
+  }
+}
